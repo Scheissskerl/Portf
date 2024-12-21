@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'Jersey';
+  src: url('../fonts/Jersey10-Regular-400.woff2');
+  src: local('Jersey'), local('Jersey'),
+    url('../fonts/Jersey10-Regular-400.woff2') format('woff2'),
+    url('../fonts/Jersey10-Regular-400.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Jersey', Arial, sens-serif;
+  background: var(--page-bg);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+:root {
+  --black: rgb(0, 0, 0);
+  --black-text: rgb(43, 41, 41);
+  --light-text: rgb(251, 218, 218);
+  --grey: #272727;
+  --light-grey: rgb(170, 163, 163);
+  --light-mode: linear-gradient(27deg, rgb(217, 229, 229) 44%, rgb(75, 74, 74) 100%);
+  --dark-mode: linear-gradient(27deg, rgb(53, 50, 50) 44%, rgb(19, 18, 18) 100%);
+
+  /* light mode */
+  --page-bg: var(--light-mode);
+  --text-color: var(--black-text);
+  --btn-mode-bg: var(--grey);
+  --header-text: var(--black);
+}
+
+.dark {
+  --page-bg: var(--dark-mode);
+  --text-color: var(--light-text);
+  --btn-mode-bg: var(--light-grey);
+  --header-text: var(--light-text);
+}
+
+.container {
+  padding-left: 100px;
+  padding-right: 100px;
+  max-width: 1960px;
+  max-width: 100%;
+}
+
+/* header */
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* header btn-mode */
+
+.heaer__btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 235px;
+}
+
+.header__mode-text {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--header-text);
+}
+
+.header__btn-mode {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  height: 30px;
+  width: 60px;
+  background-color: var(--btn-mode-bg);
+  border-radius: 50px;
+}
+
+.header__btn-icon {
+  position: relative;
+  z-index: 6;
+}
+
+/* circle in dutton */
+
+.header__btn-mode::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  height: 26px;
+  width: 26px;
+  background-color: rgb(251, 251, 206);
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.dark-mode--active::after {
+  left: 31px;
+}
+
+/* works */
+
+.works {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.works-container {
+  display: flex;
+  justify-content: center;
+}
+
+.works__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.works__list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 230px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.works__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.works__link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.works__link-title {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--text-color);
+  transition: 0.5s ease-in-out;
+}
+
+.works__title-left {
+  left: 0;
+  transform: skew(-50deg, 5deg);
+}
+
+.works__title-right {
+  right: 0;
+  transform: skew(50deg, -5deg);
+}
+
+.works__screen {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 87px;
+  transition: transform 0.8s ease-in-out;
+}
+
+.works__screen-right {
+  right: 0;
+  transform: skew(40deg, 7deg);
+}
+
+.works__screen-left {
+  left: 0;
+  transform: skew(-40deg, -7deg);
+}
+
+.works__list-item:hover .works__title-left {
+  transform: skew(0, 0);
+}
+
+.works__list-item:hover .works__screen-right {
+  transform: skew(0, 0);
+  transform: scale(3.3);
+}
+
+.works__list-item:hover .works__title-right {
+  transform: skew(0, 0);
+}
+
+.works__list-item:hover .works__screen-left {
+  transform: skew(0, 0);
+  transform: scale(3.3);
+}
