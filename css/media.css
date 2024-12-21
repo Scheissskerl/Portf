@@ -1,0 +1,57 @@
+@media(width < 1100px) {
+  .item-W-Wave {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/scheissskerl.github.io_W-Wave_.png);
+  }
+
+  .item-Fashion {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/fashion.png);
+  }
+
+  .iem-RumTibet {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/scheissskerl.github.io_RumTibet_.png);
+  }
+
+  .item-Blanchard {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/scheissskerl.github.io_Blanchard_.png);
+  }
+
+  .item-Baresy {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/scheissskerl.github.io_Baresy_.png);
+  }
+
+  .works__list-item:not(:last-child) {
+    margin-bottom: 55px;
+  }
+
+  .works__link-title {
+    top: -23%;
+    left: 0;
+    transform: none;
+  }
+
+  .works__screen {
+    display: none;
+  }
+}
+
+@media(width < 430px) {
+
+  .heaer__btn-wrap {
+    flex-direction: column;
+  }
+}
